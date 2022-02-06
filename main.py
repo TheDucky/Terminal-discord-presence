@@ -1,9 +1,7 @@
 from os import environ
 import time
-from blessings import Terminal 
 from pypresence import Presence
 import psutil
-from soupsieve import match
 
 theShell = environ['SHELL']
 

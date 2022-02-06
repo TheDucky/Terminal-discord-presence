@@ -6,7 +6,5 @@ if "gnome-terminal-server" in (i.name() for i in psutil.process_iter()):
 else:
     print("NO")
 
-theshell = os.system("$SHELL --version")
-smn = filter(str.isdigit, theshell)
-numeric = "".join(smn)
-print(numeric)
+theshell = os.system("SHELL")
+print(theshell)

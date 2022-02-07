@@ -3,14 +3,14 @@ a simple script that grabs basic terminal info and displays it as Discord Rich P
 
 ## Requirements
 - python3<br>
-`sudo apt install python3`
+`sudo apt install python3` or 
 `sudo dnf install python3` etc.
 
 - psutil and pypresence<br>
 `pip install pypresence` & `pip install psutil`
 
 ## How to setup Terminal-discord-presence
-1. Press the "Code" button and download zip file.
+1. Download the latest version
 2. extract the zip file to your preferred location
 3. create a new discord application by going to: https://discord.com/developers/applications/
 4. upload all the images from the icon folder to the /rich-presence/assets on the discord developer page

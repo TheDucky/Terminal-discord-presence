@@ -10,7 +10,7 @@ a simple script that detects when the command-line is open, grabs basic terminal
 `pip install pypresence` & `pip install psutil`
 
 ## How to setup Terminal-discord-presence
-1. Download the latest version
+1. Click on 'Code' and download the zip file
 2. extract the zip file to your preferred location
 3. create a new discord application by going to: https://discord.com/developers/applications/
 4. upload all the images from the icon folder to the /rich-presence/assets on the discord developer page

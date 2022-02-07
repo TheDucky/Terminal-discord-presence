@@ -34,4 +34,9 @@ a simple script that grabs basic terminal info and displays it as Discord Rich P
 
 ## Showcase 
 
-![GNOME-terminal ZSH](showcase.png)
+#### GNOME-terminal
+![GNOME-terminal ZSH](/showcase/1.png) ![GNOME-terminal Tmux](/showcase/4.png)
+
+#### KDE konsole
+![KDE konsole fish](/showcase/3.png) ![KDE konsole Bash](/showcase/2.png)
+

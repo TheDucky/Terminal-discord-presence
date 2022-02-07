@@ -1,7 +1,7 @@
-from os import environ
 import time
-from pypresence import Presence
 import psutil
+from os import environ
+from pypresence import Presence
 
 theShell = environ['SHELL']
 

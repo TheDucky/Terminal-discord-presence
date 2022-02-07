@@ -5,7 +5,7 @@ from pypresence import Presence
 
 theShell = os.environ['SHELL']
 
-clid = '---' # paste your client id here
+clid = 'HelloWorld!' # paste your client id here
 Slushy = Presence(client_id=clid)
 
 while True: # start the handshake loop!
@@ -47,8 +47,6 @@ while True:
             Slushy.update(state="On GNOME-terminal", details="Using Dash shell", start=timeOfStart,
                           large_image="terminal", large_text="GNOME-terminal",
                           small_image="dash", small_text="Dash shell")
-        else:
-            Slushy.clear()
 
     if "konsole" in (i.name() for i in psutil.process_iter()):
 
@@ -76,10 +74,5 @@ while True:
             Slushy.update(state="On KDE-Konsole", details="Using Dash shell", start=timeOfStart,
                           large_image="konsole", large_text="KDE-Konsole",
                           small_image="dash", small_text="Dash shell")
-        else:
-            Slushy.clear()
-
-    else:
-        Slushy.clear()
 
     time.sleep(15)

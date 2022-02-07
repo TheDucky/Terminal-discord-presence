@@ -7,7 +7,15 @@ theShell = environ['SHELL']
 
 clid = '---' # paste your client id here
 Slushy = Presence(client_id=clid)
-Slushy.connect() # start the handshake loop!
+
+while True: # start the handshake loop!
+    try:
+        Slushy.connect()
+        print("Handshake successfully!")
+        break
+    except:
+        print("ERROR initializing handshake!\nWaiting..." )
+        time.sleep(10)
 
 timeOfStart = time.time() # shows the elapsed time at the bottom (needs to be started in Slushy.update()
 

@@ -25,7 +25,7 @@ a simple script that grabs basic terminal info and displays it as Discord Rich P
 `sudo crontab -e`
 
 - Scroll to the bottom and add the following line (after all the #'s):<br>
-`@reboot python /bin/your_script.py &`
+`@reboot python /bin/your_main.py &`
 
 - The “&” at the end of the line means the command is run in the background and it won’t stop the system booting up.
 

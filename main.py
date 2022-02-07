@@ -5,7 +5,7 @@ from pypresence import Presence
 from dotenv import load_dotenv
 
 load_dotenv()
-LaunchCode = my_id = os.getenv("CLIENT_ID") # paste your client id here
+LaunchCode = os.getenv("CLIENT_ID") # paste your client id here
 theShell = os.environ['SHELL']
 Slushy = Presence(client_id=LaunchCode)
 

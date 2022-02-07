@@ -17,7 +17,20 @@ a simple script that grabs basic terminal info and displays it as Discord Rich P
 5. copy the APPLICATION ID and paste it in `clid` variable on line 10
 6. run the file `python3 main.py`
 
-### ! the script will not run if discord is not open in the background !
+## Make the python file run on startup
+- Copy the python file to /bin:<br>
+`sudo cp -i /path/to/your_main.py /bin`
+
+- Add A New Cron Job:<br>
+`sudo crontab -e`
+
+- Scroll to the bottom and add the following line (after all the #'s):<br>
+`@reboot python /bin/your_script.py &`
+
+- The “&” at the end of the line means the command is run in the background and it won’t stop the system booting up.
+
+- Finally:<br>
+`sudo reboot`
 
 ## Showcase 
 

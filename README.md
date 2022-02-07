@@ -14,7 +14,7 @@ a simple script that detects when the command-line is open, grabs basic terminal
 2. extract the zip file to your preferred location
 3. create a new discord application by going to: https://discord.com/developers/applications/
 4. upload all the images from the icon folder to the /rich-presence/assets on the discord developer page
-5. copy the APPLICATION ID and paste it in `clid` variable on line 10
+5. copy the APPLICATION ID and paste it in `clid` variable on line 8
 6. run the file `python3 main.py`
 
 ## Make the python file run on startup

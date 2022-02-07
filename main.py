@@ -5,7 +5,7 @@ from pypresence import Presence
 
 theShell = os.environ['SHELL']
 
-clid = '--' # paste your client id here
+clid = '---' # paste your client id here
 Slushy = Presence(client_id=clid)
 
 while True: # start the handshake loop!
@@ -15,7 +15,7 @@ while True: # start the handshake loop!
         break
     except:
         print("ERROR initializing handshake!\nWaiting..." )
-        time.sleep(5)
+        time.sleep(10)
 
 timeOfStart = time.time() # shows the elapsed time at the bottom (needs to be started in Slushy.update()
 
@@ -48,8 +48,38 @@ while True:
                           large_image="terminal", large_text="GNOME-terminal",
                           small_image="dash", small_text="Dash shell")                                  
         else:
-            Slushy.clear()      
+            Slushy.clear()
+
+    if "konsole" in (i.name() for i in psutil.process_iter()):
+
+        if theShell == "/usr/bin/zsh":
+            Slushy.update(state="On KDE-Konsole", details="Using ZSH shell", start=timeOfStart,
+                          large_image="konsole", large_text="KDE-Konsolel",
+                          small_image="zsh", small_text="ZSH shell")
+
+        elif theShell == "/usr/bin/bash":
+            Slushy.update(state="On KDE-Konsole", details="Using Bash shell", start=timeOfStart,
+                          large_image="konsole", large_text="KDE-Konsole",
+                          small_image="bash", small_text="Bash shell")
+
+        elif theShell == "/usr/bin/tmux":
+            Slushy.update(state="On KDE-Konsole", details="Using Tmux shell", start=timeOfStart,
+                          large_image="konsole", large_text="KDE-Konsole",
+                          small_image="tmux", small_text="Tmux shell")
+
+        elif theShell == "/usr/bin/fish":
+            Slushy.update(state="On KDE-Konsole", details="Using Fish shell", start=timeOfStart,
+                          large_image="konsole", large_text="KDE-Konsole",
+                          small_image="fish", small_text="Fish shell")  
+
+        elif theShell == "/usr/bin/dash":
+            Slushy.update(state="On KDE-Konsole", details="Using Dash shell", start=timeOfStart,
+                          large_image="konsole", large_text="KDE-Konsole",
+                          small_image="dash", small_text="Dash shell")                                  
+        else:
+            Slushy.clear()
+
     else:
-        Slushy.clear() 
-        
-    time.sleep(5)
+        Slushy.clear()
+    
+    time.sleep(15)

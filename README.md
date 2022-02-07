@@ -1,5 +1,5 @@
 # Terminal-discord-presence
-a simple script that grabs basic terminal info and displays it as Discord Rich Presence
+a simple script that detects when the command-line is open, grabs basic terminal info and displays it as Discord Rich Presence
 
 ## Requirements
 - python3<br>

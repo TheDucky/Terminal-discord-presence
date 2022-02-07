@@ -41,12 +41,12 @@ while True:
         elif theShell == "/usr/bin/fish":
             Slushy.update(state="On GNOME-terminal", details="Using Fish shell", start=timeOfStart,
                           large_image="terminal", large_text="GNOME-terminal",
-                          small_image="fish", small_text="Fish shell")  
+                          small_image="fish", small_text="Fish shell")
 
         elif theShell == "/usr/bin/dash":
             Slushy.update(state="On GNOME-terminal", details="Using Dash shell", start=timeOfStart,
                           large_image="terminal", large_text="GNOME-terminal",
-                          small_image="dash", small_text="Dash shell")                                  
+                          small_image="dash", small_text="Dash shell")
         else:
             Slushy.clear()
 
@@ -70,16 +70,16 @@ while True:
         elif theShell == "/usr/bin/fish":
             Slushy.update(state="On KDE-Konsole", details="Using Fish shell", start=timeOfStart,
                           large_image="konsole", large_text="KDE-Konsole",
-                          small_image="fish", small_text="Fish shell")  
+                          small_image="fish", small_text="Fish shell")
 
         elif theShell == "/usr/bin/dash":
             Slushy.update(state="On KDE-Konsole", details="Using Dash shell", start=timeOfStart,
                           large_image="konsole", large_text="KDE-Konsole",
-                          small_image="dash", small_text="Dash shell")                                  
+                          small_image="dash", small_text="Dash shell")
         else:
             Slushy.clear()
 
     else:
         Slushy.clear()
-    
+
     time.sleep(15)

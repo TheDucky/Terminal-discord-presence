@@ -34,9 +34,7 @@ a simple script that detects when the command-line is open, grabs basic terminal
 
 ## Showcase 
 
-#### GNOME-terminal
-![GNOME-terminal ZSH](/showcase/1.png) ![GNOME-terminal Tmux](/showcase/4.png)
-
-#### KDE konsole
-![KDE konsole fish](/showcase/3.png) ![KDE konsole Bash](/showcase/2.png)
-
+GNOME-terminal             |KDE konsole
+:-------------------------:|:-------------------------:
+![GNOME-terminal ZSH](/showcase/1.png) | ![KDE konsole fish](/showcase/3.png)
+![GNOME-terminal Tmux](/showcase/4.png) | ![KDE konsole Bash](/showcase/2.png)

@@ -1,11 +1,11 @@
+import os
 import time
 import psutil
-from os import environ
 from pypresence import Presence
 
-theShell = environ['SHELL']
+theShell = os.environ['SHELL']
 
-clid = '---' # paste your client id here
+clid = '--' # paste your client id here
 Slushy = Presence(client_id=clid)
 
 while True: # start the handshake loop!
@@ -15,7 +15,7 @@ while True: # start the handshake loop!
         break
     except:
         print("ERROR initializing handshake!\nWaiting..." )
-        time.sleep(10)
+        time.sleep(5)
 
 timeOfStart = time.time() # shows the elapsed time at the bottom (needs to be started in Slushy.update()
 
@@ -48,6 +48,8 @@ while True:
                           large_image="terminal", large_text="GNOME-terminal",
                           small_image="dash", small_text="Dash shell")                                  
         else:
-            Slushy.clear()
-    
-    time.sleep(15)
+            Slushy.clear()      
+    else:
+        Slushy.clear() 
+        
+    time.sleep(5)

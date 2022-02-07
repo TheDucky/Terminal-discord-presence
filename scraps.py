@@ -6,5 +6,5 @@ if "gnome-terminal-server" in (i.name() for i in psutil.process_iter()):
 else:
     print("NO")
 
-theshell = os.system("SHELL")
+theshell = os.environ["SHELL"]
 print(theshell)

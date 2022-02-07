@@ -17,7 +17,7 @@ a simple script that detects when the command-line is open, grabs basic terminal
 5. copy the APPLICATION ID and paste it in `clid` variable on line 8
 6. choose the correct `.py` file for your system 
     * <u>2KGT.py</u> - For GNOME-terminal and KDE-Konsole
-    * <u>POC.py</u> - For Windows CMD and Powershell
+    * <u>POTC.py</u> - For Windows CMD, Powershell and Terminal
     * <u>QAX.py</u> - For Qterminal and Xfce4-terminal
  
 7. run the file `python3 file_name.py`

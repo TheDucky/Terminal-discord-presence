@@ -9,10 +9,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 LaunchCode = os.getenv("CLIENT_ID") # paste your client id here
-Slushy = Presence(client_id=LaunchCode)
 
 while True: # start the handshake loop!
     try:
+        Slushy = Presence(client_id=LaunchCode)
         Slushy.connect()
         print("Handshake successfully!")
         break

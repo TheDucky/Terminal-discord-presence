@@ -1,4 +1,4 @@
-# for Kde-konsole and GNOME-terminal (2KGT.py)
+# for Linux terminals 
 
 import os
 import time

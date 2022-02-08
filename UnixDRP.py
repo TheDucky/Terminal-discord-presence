@@ -1,4 +1,4 @@
-# for Linux terminals 
+# for Linux terminals!
 
 import os
 import time

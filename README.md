@@ -14,11 +14,10 @@ a simple script that detects when the command-line is open, grabs basic terminal
 2. extract the zip file to your preferred location
 3. create a new discord application by going to: https://discord.com/developers/applications/
 4. upload all the images from the icon folder to the /rich-presence/assets on the discord developer page
-5. copy the APPLICATION ID and paste it in `clid` variable on line 8
+5. copy the APPLICATION ID and paste it in `LaunchCode` variable on line 10
 6. choose the correct `.py` file for your system 
-    * <u>2KGT.py</u> - For GNOME-terminal and KDE-Konsole
-    * <u>POTC.py</u> - For Windows CMD, Powershell and Terminal
-    * <u>QAX.py</u> - For Qterminal and Xfce4-terminal
+    * <u>UnixDRP.py</u> - For GNOME-terminal and KDE-Konsole
+    * <u>WindowsDRP.py</u> - For Windows CMD, Powershell and Terminal
  
 7. run the file `python3 file_name.py`
 

@@ -12,7 +12,7 @@ a simple script that detects when the command-line is open, grabs basic terminal
 ## How to setup Terminal-discord-presence
 1. Click on 'Code' and download the zip file
 2. extract the zip file to your preferred location
-3. create a new discord application by going to: https://discord.com/developers/applications/
+3. create a new discord application by going [here][herelink]
 4. upload all the images from the icon folder to the /rich-presence/assets on the discord developer page
 5. copy the APPLICATION ID and paste it in `LaunchCode` variable on line 10
 6. choose the correct `.py` file for your system 
@@ -42,3 +42,7 @@ GNOME-terminal             |KDE konsole
 :-------------------------:|:-------------------------:
 ![GNOME-terminal ZSH](/showcase/1.png) | ![KDE konsole fish](/showcase/3.png)
 ![GNOME-terminal Tmux](/showcase/4.png) | ![KDE konsole Bash](/showcase/2.png)
+
+<!-- Resources -->
+
+[herelink]: https://discord.com/developers/applications/

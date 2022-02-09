@@ -2,6 +2,7 @@
 
 import os
 import time
+from tracemalloc import start
 import psutil
 from pypresence import Presence
 from dotenv import load_dotenv
@@ -27,7 +28,7 @@ while True:
 
             Slushy.update(state="On Powershell",
                           start=timeOfStart,
-                          large_image="winterminal",
+                          large_image="powershell",
                           large_text="Powershell")
 
     elif "cmd.exe" in (i.name() for i in psutil.process_iter()):
@@ -36,4 +37,13 @@ while True:
                           start=timeOfStart,
                           large_image="cmd",
                           large_text="CMD")
+
+    elif "" in (i.name() for i in psutil.process_iter()):
+
+            Slushy.update(state="On Windows-Terminal",
+                          start=timeOfStart,
+                          large_image="winterminal",
+                          large_text="Windows-Terminal")
+
+
     time.sleep(15)

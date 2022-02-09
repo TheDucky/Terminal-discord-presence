@@ -1,14 +1,10 @@
 # for Windows terminals, CMD and Powershell!
 
-import os
 import time
-from tracemalloc import start
 import psutil
 from pypresence import Presence
-from dotenv import load_dotenv
 
-load_dotenv()
-LaunchCode = os.getenv("CLIENT_ID") # paste your client id here
+LaunchCode = "939904925494829086" # paste your client id here
 Slushy = Presence(client_id=LaunchCode)
 
 while True: # start the handshake loop!

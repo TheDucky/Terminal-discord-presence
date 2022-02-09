@@ -10,16 +10,12 @@ a simple script that detects when the command-line is open, grabs basic terminal
 `pip install pypresence` & `pip install psutil`
 
 ## How to setup Terminal-discord-presence
-1. Click on 'Code' and download the zip file
-2. extract the zip file to your preferred location
-3. create a new discord application by going [here][herelink]
-4. upload all the images from the icon folder to the /rich-presence/assets on the discord developer page
-5. copy the APPLICATION ID and paste it in `LaunchCode` variable on line 10
-6. choose the correct `.py` file for your system 
-    * <u>UnixDRP.py</u> - For GNOME-terminal and KDE-Konsole
-    * <u>WindowsDRP.py</u> - For Windows CMD, Powershell and Terminal
+1. 
+2. choose the correct `.py` file for your system 
+    * [UnixDRP.py] - For GNOME-terminal and KDE-Konsole
+    * [WindowsDRP.py] - For Windows CMD, Powershell and Terminal
  
-7. run the file `python3 file_name.py`
+3. run the file `python3 file_name.py`
 
 ## Make the python file run on startup
 - Copy the python file to /bin:<br>
@@ -47,3 +43,5 @@ GNOME-terminal             |KDE konsole               |Windows
 <!-- Resources -->
 
 [herelink]: https://discord.com/developers/applications/
+[UnixDRP.py]: UnixDRP.py
+[WindowsDRP.py]: WindowsDRP.py

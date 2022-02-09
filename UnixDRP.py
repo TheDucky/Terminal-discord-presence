@@ -7,10 +7,10 @@ from pypresence import Presence
 
 LaunchCode = "939904925494829086" # paste your client id here
 theShell = os.environ['SHELL']
-Slushy = Presence(client_id=LaunchCode)
 
 while True: # start the handshake loop!
     try:
+        Slushy = Presence(client_id=LaunchCode)
         Slushy.connect()
         print("Handshake successfully!")
         break

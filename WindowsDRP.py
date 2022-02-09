@@ -4,11 +4,17 @@ import time
 import psutil
 from pypresence import Presence
 
+<<<<<<< HEAD
 LaunchCode = "939904925494829086" # paste your client id here
 Slushy = Presence(client_id=LaunchCode)
+=======
+load_dotenv()
+LaunchCode = os.getenv("CLIENT_ID") # paste your client id here
+>>>>>>> 5e5e6a6098b5d84f097a5839989dc3ff0096bcc7
 
 while True: # start the handshake loop!
     try:
+        Slushy = Presence(client_id=LaunchCode)
         Slushy.connect()
         print("Handshake successfully!")
         break

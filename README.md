@@ -1,5 +1,5 @@
 # Terminal-discord-presence
-a simple script that detects when the command-line is open, grabs basic terminal info and displays it as Discord Rich Presence
+A simple script that detects when the command-line is open, grabs basic terminal info and displays it as Discord Rich Presence
 
 ## Requirements
 - python3<br>
@@ -12,11 +12,11 @@ a simple script that detects when the command-line is open, grabs basic terminal
 ## How to setup Terminal-discord-presence
 1. Press the "Code" button and download zip file.
 
-2. choose the correct `.py` file for your system 
+2. Choose the correct `.py` file for your system 
     * [UnixDRP.py] - For GNOME-terminal and KDE-Konsole
     * [WindowsDRP.py] - For Windows CMD, Powershell and Terminal
  
-3. run the file `python3 file_name.py` 
+3. Run the file `python3 file_name.py` 
 
 **AND YOU ARE DONE!. ITS THAT SIMPLE**
 

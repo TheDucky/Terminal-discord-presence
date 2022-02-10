@@ -22,7 +22,7 @@ timeOfStart = time.time() # shows the elapsed time at the bottom (needs to be st
 
 while True:
 
-    if "gnome-terminal-server" in (i.name() for i in psutil.process_iter()):
+    if "gnome-terminal" in (i.name() for i in psutil.process_iter()):
 
         if theShell == "/usr/bin/zsh":
             Slushy.update(state="On GNOME-terminal",

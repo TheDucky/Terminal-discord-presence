@@ -6,21 +6,24 @@ from pypresence import Presence
 
 LaunchCode = "939904925494829086"
 
-# identifying terminal
-if "powershell.exe" in (i.name() for i in psutil.process_iter()):
-    presenceState = "On Powershell"
-    presenceLargeImage = "powershell"
-    presenceLargeText="Powershell"
+# identify terminal and get terminal data
+def getData():
+    if "powershell.exe" in (i.name() for i in psutil.process_iter()):
+        state = "On Powershell"
+        largeImage = "powershell"
+        largeText ="Powershell"
     
-elif "cmd.exe" in (i.name() for i in psutil.process_iter()):
-    presenceState = "On CMD"
-    presenceLargeImage = "cmd"
-    presenceLargeText = "CMD"
+    elif "cmd.exe" in (i.name() for i in psutil.process_iter()):
+        state = "On CMD"
+        largeImage = "cmd"
+        largeText = "CMD"
+        
+    elif "" in (i.name() for i in psutil.process_iter()):
+        state = "On Windows-Terminal"
+        largeImage = "winterminal"
+        largeText = "Windows-Terminal"
     
-elif "" in (i.name() for i in psutil.process_iter()):
-    presenceState = "On Windows-Terminal"
-    presenceLargeImage = "winterminal"
-    presenceLargeText = "Windows-Terminal"
+    return state, largeImage, largeText
 
 timeOfStart = time.time() # shows the elapsed time at the bottom (needs to be started in Slushy.update()
 
@@ -28,12 +31,13 @@ print("started\n")
 
 while True:
     try:
+        (state, largeImage, largeText) = getData()
         Slushy = Presence(client_id=LaunchCode)
         Slushy.connect()
-        Slushy.update(state=presenceState,
-                      start=timeOfStart,
-                      large_image=presenceLargeImage,
-                      large_text=presenceLargeText)
+        Slushy.update(start=timeOfStart,
+                      state=state,
+                      large_image=largeImage,
+                      large_text=largeText)
         print("Connect success!")
         time.sleep(30)
     except:

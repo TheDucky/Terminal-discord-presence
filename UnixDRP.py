@@ -8,47 +8,11 @@ from pypresence import Presence
 LaunchCode = "939904925494829086" # paste your client id here
 theShell = os.environ['SHELL']
 
-<<<<<<< HEAD
-while True: # start the handshake loop!
-    try:
-        Slushy = Presence(client_id=LaunchCode)
-        Slushy.connect()
-        print("Handshake successfully!")
-        break
-    except:
-        print("ERROR initializing handshake!\nWaiting..." )
-        time.sleep(10)
-
-timeOfStart = time.time() # shows the elapsed time at the bottom needs to be started in Slushy.update()
-
-while True:
-
-    if "gnome-terminal" in (i.name() for i in psutil.process_iter()):
-
-        if theShell == "/usr/bin/zsh":
-            Slushy.update(state="On GNOME-terminal",
-                          details="Using ZSH shell",
-                          start=timeOfStart,
-                          large_image="terminal",
-                          large_text="GNOME-terminal",
-                          small_image="zsh",
-                          small_text="ZSH shell")
-
-        elif theShell == "/usr/bin/bash":
-            Slushy.update(state="On GNOME-terminal",
-                          details="Using Bash shell",
-                          start=timeOfStart,
-                          large_image="terminal",
-                          large_text="GNOME-terminal",
-                          small_image="bash",
-                          small_text="Bash shell")
-=======
 # identifying terminal
 if "gnome-terminal" in (i.name() for i in psutil.process_iter()):
     presenceState = "On GNOME-terminal"
     presenceLargeImage = "terminal"
     presenceLargeText = "GNOME-terminal"
->>>>>>> 57993461d883d60e50ccb18cdcd0e87eba25ca7b
 
 elif "konsole" in (i.name() for i in psutil.process_iter()):
     presenceState = "On KDE-Konsole"

@@ -18,7 +18,7 @@ while True: # start the handshake loop!
         print("ERROR initializing handshake!\nWaiting..." )
         time.sleep(10)
 
-timeOfStart = time.time() # shows the elapsed time at the bottom (needs to be started in Slushy.update()
+timeOfStart = time.time() # shows the elapsed time at the bottom needs to be started in Slushy.update()
 
 while True:
 

@@ -5,40 +5,38 @@ import psutil
 from pypresence import Presence
 
 LaunchCode = "939904925494829086"
-while True: # start the handshake loop!
-    try:
-        Slushy = Presence(client_id=LaunchCode)
-        Slushy.connect()
-        print("Handshake successfully!")
-        break
-    except:
-        print("ERROR initializing handshake!\nWaiting..." )
-        time.sleep(10)
+
+# identifying terminal
+if "powershell.exe" in (i.name() for i in psutil.process_iter()):
+    presenceState = "On Powershell"
+    presenceLargeImage = "powershell"
+    presenceLargeText="Powershell"
+    
+elif "cmd.exe" in (i.name() for i in psutil.process_iter()):
+    presenceState = "On CMD"
+    presenceLargeImage = "cmd"
+    presenceLargeText = "CMD"
+    
+elif "" in (i.name() for i in psutil.process_iter()):
+    presenceState = "On Windows-Terminal"
+    presenceLargeImage = "winterminal"
+    presenceLargeText = "Windows-Terminal"
 
 timeOfStart = time.time() # shows the elapsed time at the bottom (needs to be started in Slushy.update()
 
+print("started\n")
+
 while True:
-
-    if "powershell.exe" in (i.name() for i in psutil.process_iter()):
-
-            Slushy.update(state="On Powershell",
-                          start=timeOfStart,
-                          large_image="powershell",
-                          large_text="Powershell")
-
-    elif "cmd.exe" in (i.name() for i in psutil.process_iter()):
-
-            Slushy.update(state="On CMD",
-                          start=timeOfStart,
-                          large_image="cmd",
-                          large_text="CMD")
-
-    elif "" in (i.name() for i in psutil.process_iter()):
-
-            Slushy.update(state="On Windows-Terminal",
-                          start=timeOfStart,
-                          large_image="winterminal",
-                          large_text="Windows-Terminal")
-
-
-    time.sleep(15)
+    try:
+        Slushy = Presence(client_id=LaunchCode)
+        Slushy.connect()
+        Slushy.update(state=presenceState,
+                      start=timeOfStart,
+                      large_image=presenceLargeImage,
+                      large_text=presenceLargeText)
+        print("Connect success!")
+        time.sleep(30)
+    except:
+        print("Failed to connect\nWaiting...\n")
+        time.sleep(5)
+        pass

@@ -12,7 +12,7 @@ theShell = os.environ['SHELL']
 def getData():
 
     # identifying terminal
-    if "gnome-terminal" in (i.name() for i in psutil.process_iter()):
+    if "gnome-terminal-server" in (i.name() for i in psutil.process_iter()):
         state = "On GNOME-terminal"
         largeImage = "terminal"
         largeText = "GNOME-terminal"

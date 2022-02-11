@@ -10,6 +10,8 @@ theShell = os.environ['SHELL']
 
 # identify terminal and get terminal data
 def getData():
+
+    # identifying terminal
     if "gnome-terminal" in (i.name() for i in psutil.process_iter()):
         state = "On GNOME-terminal"
         largeImage = "terminal"
@@ -19,15 +21,19 @@ def getData():
         state = "On KDE-Konsole"
         largeImage = "konsole"
         largeText = "KDE-Konsole"
+    else:
+        (state, largeImage, largeText) = ("On Linux Terminal", None, "Linux Terminal") # default values
 
-    #identifying shell
+    # identifying shell
     shells = ["ZSH", "Bash", "Tmux", "Fish", "Dash"]
+
+    (details, smallImage, smallText) = ("Using a shell", None, None) # default values
     for shell in shells:
         if theShell == f"/usr/bin/{shell.lower()}":
             details = f"Using {shell} shell"
             smallImage = shell.lower()
             smallText = f"{shell} shell"
-    
+
     return state, largeImage, largeText, details, smallImage, smallText
 
 timeOfStart = time.time() # shows the elapsed time at the bottom (needs to be started in Slushy.update())
@@ -37,7 +43,7 @@ print("started\n")
 while True:
     try:
         (state, largeImage, largeText, details, smallImage, smallText) = getData()
-        
+
         Slushy = Presence(client_id=LaunchCode)
         Slushy.connect()
         Slushy.update(start=timeOfStart,

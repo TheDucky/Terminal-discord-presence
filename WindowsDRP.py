@@ -18,7 +18,7 @@ def getData():
         largeImage = "cmd"
         largeText = "CMD"
         
-    elif "" in (i.name() for i in psutil.process_iter()):
+    else:
         state = "On Windows-Terminal"
         largeImage = "winterminal"
         largeText = "Windows-Terminal"

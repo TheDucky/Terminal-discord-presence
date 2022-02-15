@@ -37,7 +37,7 @@ A simple script that detects when the command-line is open, grabs basic terminal
 
 ## Nano rich presence!
 
-run the [NanoPresence.py] to show rich presence for the nano CLI editor!
+run the [NanoPresence.py] to show rich presence for the nano CLI editor! <br/>
 <img width=200px src="showcase/8.png">
 
 ## Showcase 

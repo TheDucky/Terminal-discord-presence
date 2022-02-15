@@ -35,6 +35,11 @@ A simple script that detects when the command-line is open, grabs basic terminal
 - Finally:<br>
 `sudo reboot`
 
+## Nano rich presence!
+
+run the [NanoPresence.py] to show rich presence for the nano CLI editor!
+<img width=200px src="showcase/8.png">
+
 ## Showcase 
 
 GNOME-terminal             |KDE konsole               |Windows
@@ -48,3 +53,4 @@ GNOME-terminal             |KDE konsole               |Windows
 [herelink]: https://discord.com/developers/applications/
 [UnixDRP.py]: UnixDRP.py
 [WindowsDRP.py]: WindowsDRP.py
+[NanoPresence.py]: NanoPresence.py
